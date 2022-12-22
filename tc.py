@@ -22,8 +22,8 @@ def webhook():
     req = request.get_json(force=Ture)
     action = req.get("queryResult").get("action")
 
-    if (action == "Subway_Menu"):
-        cond = req.get("queryResult").get("parameters").get("Subway_Menu")
+    if (action == "KFC_Menu"):
+        cond = req.get("queryResult").get("parameters").get("KFC_Menu")
         info = ""
         result = jsonify({
             "fulfillmentText": info,
@@ -144,8 +144,8 @@ def webhook():
         result = jsonify({"fulfillmentText": info})
     return make_response(result)
 
-#if __name__ == "__main__":
-#    app.run()
+if __name__ == "__main__":
+    app.run()
 
 
 
